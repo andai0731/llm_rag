@@ -24,6 +24,7 @@ numpy==1.25.2
 openai==0.28.0
 packaging==23.1
 pandas==2.1.0
+pdf2image
 protobuf==4.24.3
 pyarrow==13.0.0
 pycparser==2.21
