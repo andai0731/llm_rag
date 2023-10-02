@@ -5,6 +5,8 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.indexes import VectorstoreIndexCreator
 from langchain.document_loaders import UnstructuredPDFLoader
 from langchain.chains import RetrievalQA
+from pdfminer.pdfinterp import PDFResourceManager
+from pdfminer.converter import PDFResourceManager
 
 from langchain.embeddings import GooglePalmEmbeddings
 from langchain.llms import GooglePalm
