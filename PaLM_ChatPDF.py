@@ -33,7 +33,7 @@ load_dotenv()
 def main():
     st.header("Chat with PDF 💬")
 
-    files_path = "./SOURCE_DOCUMENTS/Orca_paper.pdf"
+    files_path = "./Products offer by yash computech solutions.pdf"
     loaders = [UnstructuredPDFLoader(files_path)]
 
     # if "index" not in st.session:
