@@ -44,7 +44,7 @@ six==1.16.0
 smmap==5.0.0
 sounddevice==0.4.6
 soundfile==0.12.1
-sqlite3 >= 3.35.0
+#sqlite3 >= 3.35.0
 streamlit-audiorecorder==0.0.3.post1
 tenacity==8.2.3
 toml==0.10.2
