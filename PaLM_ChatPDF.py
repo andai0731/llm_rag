@@ -5,6 +5,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.indexes import VectorstoreIndexCreator
 from langchain.document_loaders import UnstructuredPDFLoader
 from langchain.chains import RetrievalQA
+from pdfminer.converter import PDFPageAggregator, PDFResourceManager
 #from pdfminer.pdfinterp import PDFResourceManager, process_pdf
 #from pdfminer.converter import TextConverter
 #from pdfminer.pdfinterp import PDFResourceManager
