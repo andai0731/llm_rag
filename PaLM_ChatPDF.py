@@ -12,6 +12,7 @@ from pdfminer.pdfdocument import PDFDocument
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.pdfpage import PDFPage
 from pdfminer.pdfparser import PDFParser
+from tempfile import NamedTemporaryFile
 
 from langchain.embeddings import GooglePalmEmbeddings
 from langchain.llms import GooglePalm
@@ -42,11 +43,16 @@ def main():
 
     
     uploaded_file = st.file_uploader('Choose your .pdf file', type="pdf")
-    if uploaded_file is not None:
-      df = extract_data(uploaded_file)
     #files_path = "./Products offer by yash computech solutions.pdf"
     #loaders = [UnstructuredPDFLoader(files_path)]
-    loaders = [UnstructuredPDFLoader(df)]
+    
+    bytes_data = uploaded_file.read()
+    with NamedTemporaryFile(delete=False) as tmp:  # open a named temporary file
+        tmp.write(bytes_data)                      # write data from the uploaded file into it
+        data = PyPDFLoader(tmp.name).load()        # <---- now it works!
+    os.remove(tmp.name)                            # remove temp file
+
+    loaders = [UnstructuredPDFLoader(uploaded_file)]
 
 
     # if "index" not in st.session:
