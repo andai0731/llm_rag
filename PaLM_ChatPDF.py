@@ -40,8 +40,12 @@ load_dotenv()
 def main():
     st.header("Chat with PDF 💬")
 
-    files_path = "./Products offer by yash computech solutions.pdf"
-    loaders = [UnstructuredPDFLoader(files_path)]
+    
+    uploaded_file = st.file_uploader('Choose your .pdf file', type="pdf")
+    #files_path = "./Products offer by yash computech solutions.pdf"
+    #loaders = [UnstructuredPDFLoader(files_path)]
+    loaders = [UnstructuredPDFLoader(uploaded_file)]
+
 
     # if "index" not in st.session:
     index = VectorstoreIndexCreator(
