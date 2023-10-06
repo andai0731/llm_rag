@@ -42,9 +42,11 @@ def main():
 
     
     uploaded_file = st.file_uploader('Choose your .pdf file', type="pdf")
+    if uploaded_file is not None:
+      df = extract_data(uploaded_file)
     #files_path = "./Products offer by yash computech solutions.pdf"
     #loaders = [UnstructuredPDFLoader(files_path)]
-    loaders = [UnstructuredPDFLoader(uploaded_file)]
+    loaders = [UnstructuredPDFLoader(df)]
 
 
     # if "index" not in st.session:
