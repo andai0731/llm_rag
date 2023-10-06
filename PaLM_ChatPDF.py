@@ -52,7 +52,7 @@ def main():
         data = PyPDFLoader(tmp.name).load()        # <---- now it works!
     os.remove(tmp.name)                            # remove temp file
 
-    loaders = [UnstructuredPDFLoader(uploaded_file)]
+    loaders = [UnstructuredPDFLoader(data)]
 
 
     # if "index" not in st.session:
