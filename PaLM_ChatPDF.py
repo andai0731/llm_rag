@@ -4,12 +4,14 @@ from streamlit_extras.add_vertical_space import add_vertical_space
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.indexes import VectorstoreIndexCreator
 from langchain.document_loaders import UnstructuredPDFLoader
-from langchain.chains import RetrievalQA
-from pdfminer.converter import PDFPageAggregator, PDFResourceManager
-#from pdfminer.pdfinterp import PDFResourceManager, process_pdf
-#from pdfminer.converter import TextConverter
-#from pdfminer.pdfinterp import PDFResourceManager
-#from pdfminer.converter import PDFResourceManager
+from langchain.chains import RetrievalQAfrom io import StringIO
+from io import StringIO
+from pdfminer.converter import TextConverter
+from pdfminer.layout import LAParams
+from pdfminer.pdfdocument import PDFDocument
+from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
+from pdfminer.pdfpage import PDFPage
+from pdfminer.pdfparser import PDFParser
 
 from langchain.embeddings import GooglePalmEmbeddings
 from langchain.llms import GooglePalm
