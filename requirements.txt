@@ -5,6 +5,7 @@ async-timeout==4.0.3
 attrs==23.1.0
 audio-recorder-streamlit==0.0.8
 charset-normalizer==3.2.0
+chromadb
 click==8.1.7
 colorama==0.4.6
 python-dotenv
