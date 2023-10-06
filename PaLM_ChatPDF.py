@@ -42,17 +42,16 @@ def main():
     st.header("Chat with PDF 💬")
 
     
-    uploaded_file = st.file_uploader('Choose your .pdf file', type="pdf")
+    #uploaded_file = st.file_uploader('Choose your .pdf file', type="pdf")
     #files_path = "./Products offer by yash computech solutions.pdf"
     #loaders = [UnstructuredPDFLoader(files_path)]
-    
-    bytes_data = uploaded_file.read()
-    with NamedTemporaryFile(delete=False) as tmp:  # open a named temporary file
-        tmp.write(bytes_data)                      # write data from the uploaded file into it
-        data = PyPDFLoader(tmp.name).load()        # <---- now it works!
-    os.remove(tmp.name)                            # remove temp file
+    uploaded_file = st.file_uploader("File upload", type='pdf')
+    with NamedTemporaryFile(dir='.', suffix='.pdf') as f:
+        f.write(uploaded_file.getbuffer())
+        loaders = [UnstructuredPDFLoader(f.name)]
 
-    loaders = [UnstructuredPDFLoader(data)]
+
+    #loaders = [UnstructuredPDFLoader(data)]
 
 
     # if "index" not in st.session:
