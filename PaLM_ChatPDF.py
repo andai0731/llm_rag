@@ -43,7 +43,8 @@ def main():
 
     
     uploaded_file = st.file_uploader('Choose your .pdf file', type="pdf")
-    files_path = uploaded_file.name
+    if uploaded_file is not None:
+        files_path = uploaded_file.name
     #files_path = "./Products offer by yash computech solutions.pdf"
     loaders = [UnstructuredPDFLoader(files_path)]
 
