@@ -44,7 +44,7 @@ def main():
     
     #uploaded_file = st.file_uploader('Choose your .pdf file', type="pdf")
     #if uploaded_file is not None:
-    files_path = "https://drive.google.com/file/d/1S73vIwCzBi0maJA7kBQXW_Ypd6YSk4sa/view?usp=drive_link"
+    files_path = "https://publuu.com/flip-book/263252/619188"
     #files_path = "./Products offer by yash computech solutions.pdf"
     loaders = [UnstructuredPDFLoader(files_path)]
 
