@@ -17,7 +17,7 @@ from tempfile import NamedTemporaryFile
 from langchain_community.embeddings import GooglePalmEmbeddings
 #from langchain.embeddings import GooglePalmEmbeddings
 
-from langchain.llms import GooglePalm
+from langchain_community.llms import GooglePalm
 import os, glob
 
 
