@@ -12,3 +12,4 @@ openai
 ffprobe
 streamlit_extras
 unstructured
+opencv-python
