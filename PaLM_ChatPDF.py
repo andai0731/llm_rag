@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from streamlit_extras.add_vertical_space import add_vertical_space
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.indexes import VectorstoreIndexCreator
-from langchain.document_loaders import UnstructuredPDFLoader
+from langchain_community.document_loaders import UnstructuredPDFLoader
 from langchain.chains import RetrievalQA
 from io import StringIO
 from pdfminer.converter import TextConverter
@@ -14,7 +14,9 @@ from pdfminer.pdfpage import PDFPage
 from pdfminer.pdfparser import PDFParser
 from tempfile import NamedTemporaryFile
 
-from langchain.embeddings import GooglePalmEmbeddings
+from langchain_community.embeddings import GooglePalmEmbeddings
+#from langchain.embeddings import GooglePalmEmbeddings
+
 from langchain.llms import GooglePalm
 import os, glob
 
