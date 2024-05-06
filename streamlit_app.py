@@ -6,6 +6,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.indexes import VectorstoreIndexCreator
 from langchain_community.document_loaders import UnstructuredPDFLoader
 from langchain.chains import RetrievalQA
+from langchain_google_genai import GoogleGenerativeAI
 from io import StringIO
 from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
@@ -61,7 +62,9 @@ def main():
         text_splitter=RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=0),
     ).from_loaders(loaders)
 
-    llm = GooglePalm(temperature=0.1)  # OpenAI()
+#    llm = GooglePalm(temperature=0.1)  # OpenAI()
+    llm = GoogleGenerativeAI(model="models/text-bison-001", google_api_key=SECRET_KEY, temperature=0.1)
+
     chain = RetrievalQA.from_chain_type(
         llm=llm,
         chain_type="stuff",
