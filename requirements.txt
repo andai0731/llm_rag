@@ -13,3 +13,4 @@ ffprobe
 streamlit_extras
 unstructured
 opencv-python
+pillow_heif
