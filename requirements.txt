@@ -5,6 +5,7 @@ extract_pages
 google-generativeai
 langchain
 langchain_community
+langchain-google-genai
 pdf2image
 pdfminer.six
 pikepdf
