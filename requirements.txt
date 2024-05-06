@@ -15,3 +15,5 @@ unstructured
 #opencv-python
 opencv-python-headless
 pillow_heif
+unstructured_inference 
+pytesseract
