@@ -40,7 +40,7 @@ with st.sidebar:
     st.write("Made with ❤️ by [Vedant Dwivedi](https://vedantdwivedi.github.io/)")
 
 load_dotenv()
-
+API = os.getenv("GOOGLE_API_KEY")
 
 def main():
     st.header("Chat with PDF 💬")
@@ -63,7 +63,7 @@ def main():
     ).from_loaders(loaders)
 
 #    llm = GooglePalm(temperature=0.1)  # OpenAI()
-    llm = GoogleGenerativeAI(model="models/text-bison-001", google_api_key=GOOGLE_API_KEY, temperature=0.1)
+    llm = GoogleGenerativeAI(model="models/text-bison-001", google_api_key=API, temperature=0.1)
 
     chain = RetrievalQA.from_chain_type(
         llm=llm,
