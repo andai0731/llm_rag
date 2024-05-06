@@ -1,5 +1,5 @@
 import streamlit as st
-#import cv2
+import cv2
 from dotenv import load_dotenv
 from streamlit_extras.add_vertical_space import add_vertical_space
 from langchain.text_splitter import RecursiveCharacterTextSplitter
