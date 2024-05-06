@@ -63,7 +63,7 @@ def main():
     ).from_loaders(loaders)
 
 #    llm = GooglePalm(temperature=0.1)  # OpenAI()
-    llm = GoogleGenerativeAI(model="models/text-bison-001", google_api_key=SECRET_KEY, temperature=0.1)
+    llm = GoogleGenerativeAI(model="models/text-bison-001", google_api_key=GOOGLE_API_KEY, temperature=0.1)
 
     chain = RetrievalQA.from_chain_type(
         llm=llm,
