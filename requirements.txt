@@ -12,5 +12,6 @@ openai
 ffprobe
 streamlit_extras
 unstructured
-opencv-python
+#opencv-python
+opencv-python-headless
 pillow_heif
